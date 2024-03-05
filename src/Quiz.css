@@ -1,89 +1,52 @@
-.quiz{
+.quiz {
     height: 100%;
-   
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
 }
-.question{
+
+.question {
     width: 80%;
-    background:linear-gradient(#020230,black);
+    background: linear-gradient(#020230, black);
     border: 3px solid whitesmoke;
     text-align: center;
     padding: 20px;
     font-size: 20px;
     border-radius: 11px;
-
 }
 
-
-
-.answer{
-    display:flex;
+.answer {
+    display: flex;
     width: 100%;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-   
 }
 
-
-    
 .ans {
-    width: 40%;
+    width: 45%; /* Adjusted width for smaller screens */
     padding: 10px;
     text-align: center;
     background: linear-gradient(#0e0124, #22074d);
     border: 2px solid white;
-    font-size: 20px;
+    font-size: 16px; /* Adjusted font size for smaller screens */
     font-weight: 300;
     border-radius: 15px;
-    margin: 0px 10px 20px 10px;
+    margin: 5px; /* Adjusted margin for smaller screens */
     cursor: pointer;
-   
-}
-.ans.correct{
-    animation: correct 3s ease forwards;
-}
-.ans:hover,.ans.active {
-    background: mediumblue !important;
-}
-.ans.wrong{
-    animation: wrong 3s ease forwards;
-}
-.ans.active{
-    background: mediumblue;
 }
 
-@keyframes correct {
-    0%, 22%, 42% {
-        background: mediumblue;
+/* Media query for smaller screens */
+@media only screen and (max-width: 600px) {
+    .question {
+        width: 90%; /* Adjusted width for smaller screens */
     }
 
-    20%, 40% {
-        background: linear-gradient(#0e0124, #22074d);
-    }
-
-    60%, 100% {
-        background: green;
+    .ans {
+        width: 90%; /* Adjusted width for smaller screens */
+        font-size: 14px; /* Adjusted font size for smaller screens */
     }
 }
-@keyframes wrong {
-    0%, 22%, 42% {
-        background: mediumblue;
-    }
-
-    20%, 40% {
-        background: linear-gradient(#0e0124, #22074d);
-    }
-
-    60%, 100% {
-        background: crimson;
-    }
-}
-
-
-
 
 

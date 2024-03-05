@@ -6,19 +6,34 @@
   position: relative;
 }
 .earn{
-   width: 20%;
-   height: 20%;
-  font-size: 30px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  position: absolute;
-  top:330px;
-  left: 550px;
-  padding: 10px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
   
 }
+.restart {
+  text-align: center;
+}
+
+.restart button {
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px;
+}
+
+.restart button:hover {
+  background-color: blue;
+  color: white;
+}
+
 .main{
   width: 75%;
   background: linear-gradient(to bottom,rgba(0,0,0,0),#020230), url("./assets/bg.jpg"),center;
@@ -89,4 +104,31 @@
   margin: auto 10px;
   align-self: center;
 
+}
+.money-icon {
+  color: white;
+}
+
+@media only screen and (max-width: 768px) {
+.pyramid{
+ display: none;
+}
+.main{
+  width: 100%;
+  background: linear-gradient(to bottom,rgba(0,0,0,0),#020230), url("./assets/bg.jpg");
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.top{
+  height: 50%;
+  display: flex;
+  justify-content: center;
+}
+.timer{
+ position: relative;
+ top: 75%;
+ right: 50%;
+
+}
 }

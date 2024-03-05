@@ -14,14 +14,24 @@ function App() {
     questionnumber>1 &&
     Setearned(money.find((m)=>m.id===questionnumber-1).amount)
    },[money,questionnumber]);
+    const handleClick = () => {
+    window.location.reload();
+  };
   
    return(
     <div className="App">
-      {timer? <div className="earn">you earned {earned}</div>:
+      {timer? <div className="earn">you earned {earned}
+      
+        <div className="restart">
+          <button onClick={handleClick}>Restart</button>
+        </div>
+      </div>:
       
    (
     <>
    <div className="main">
+   <i class="fas fa-money money-icon"></i>
+
     <div className="top"><div className="timer"><Timer SetTimeOut={SetTimeOut}  questionnumber={questionnumber}/></div></div>
    <div className="bottom"><Quiz setquestionnumber={setquestionnumber} SetTimeOut={SetTimeOut}questionnumber={questionnumber} /></div>
    </div>
